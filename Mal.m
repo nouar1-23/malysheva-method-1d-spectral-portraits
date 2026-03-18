@@ -56,7 +56,8 @@ function [] = Mal(a, b, n)
         % Обработка ошибок сходимости
         if skip_step || isempty(p) || any(isnan(p(:)))
             e(i) = r1_val;
-            i     = i + 1;
+            m(i) =NaN;
+            i    = i + 1;
             r1_val = r1_val + h;
             fprintf('Внимание: не удалось получить проектор при r = %f\n', r1_val);
             continue 
