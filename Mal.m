@@ -32,7 +32,7 @@ function [] = Mal(a, b, n)
         d  = 0;
         
         % Внутренний цикл уточнения проектора
-        while (max(abs(p * p - p), [], 'all') > ip * max(abs(p), [], 'all') && d <= m0 / 3)
+        while (max(abs(p * p - p), [], 'all') > ip && d <= m0 / 3)
             d = d + 1;
             for i1 = 1:3
                 S_temp = [-B0; A0];
